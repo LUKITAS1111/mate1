@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<title>El MATE</title>
+<style>
+  :root{--bg:#f7efe6;--card:#fff;--text:#222;--accent:#6b4f2b}
+  html,body{height:100%;margin:0;font-family:Georgia, 'Times New Roman', serif;background:linear-gradient(180deg,#f7efe6 0%, #f0e7db 100%);display:flex;align-items:center;justify-content:center;padding:24px;}
+  .frame{max-width:820px;width:100%;background:rgba(255,255,255,0.85);backdrop-filter:blur(2px);box-shadow:0 8px 30px rgba(0,0,0,0.12);border-radius:12px;overflow:hidden;border:1px solid rgba(0,0,0,0.06);display:flex;align-items:stretch;}
+  .left{flex:1;padding:40px 48px;background-image:
+    linear-gradient(90deg, rgba(255,255,255,0.25) 0 100%), 
+    repeating-linear-gradient(45deg, #efe3d1 0 4px, #f7efe6 4px 8px);
+    background-blend-mode:overlay;
+  }
+  h1{margin:0 0 14px;font-size:34px;color:var(--accent);letter-spacing:1px}
+  .meta{font-size:14px;margin-bottom:22px;color:#444}
+  p.poema{white-space:pre-line;font-size:18px;line-height:1.55;color:var(--text);margin:0}
+  .right{width:240px;display:flex;align-items:center;justify-content:center;padding:24px;background:transparent}
+  /* simple responsive */
+  @media (max-width:760px){
+    .frame{flex-direction:column}
+    .right{width:100%;padding:20px}
+    .left{padding:28px}
+    h1{font-size:28px}
+  }
+  /* small footer */
+  .foot{font-size:12px;color:#666;margin-top:18px}
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="left">
+      <h1>El MATE</h1>
+      <div class="meta">Por <strong>Alois Castro</strong> y <strong>Lucas Cardozo</strong></div>
+      <p class="poema">
+La dicha de tomar la combinación de yerba con agua caliente por las mañanas.
+un círculo de madera y metal
+donde lo dulce y amargo tienen lugar, pero a la vez, sin estar los dos ahi
+Un mate amargo como la vida
+Un mate dulce como lo que la vida puede ofrecer
+Con cada sorbo, el tiempo se desvanece cuando el agua caliente cae al lado de la bombilla
+Un viaje por lo material, la naturaleza y el mar donde lo desconocido se vuelve el pan de cada día para acompañar cada sorbo que damos de la vida y lo dulce que puede llegar a ser
+      </p>
+      <div class="foot">Trabajo de literatura — Poema vanguardista sobre el mate.</div>
+    </div>
+    <div class="right" aria-hidden="true">
+      <!-- Simple inline SVG of a mate gourd with bombilla -->
+      <svg width="140" height="220" viewBox="0 0 140 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración de un mate">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#c79b6a"/>
+            <stop offset="1" stop-color="#8a5b32"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#7fb482"/>
+            <stop offset="1" stop-color="#4a7f50"/>
+          </linearGradient>
+        </defs>
+        <!-- mate gourd -->
+        <ellipse cx="70" cy="160" rx="48" ry="24" fill="#6b4f2b" opacity="0.95"/>
+        <path d="M30 60 C28 26, 54 18, 70 18 C86 18, 112 26,110 60 C110 110,110 160,70 190 C30 160,30 110,30 60 Z" fill="url(#g1)" stroke="#6b4f2b" stroke-width="2"/>
+        <!-- yerba top -->
+        <ellipse cx="70" cy="44" rx="38" ry="12" fill="#557a45"/>
+        <ellipse cx="70" cy="45" rx="34" ry="8" fill="url(#g2)"/>
+        <!-- bombilla -->
+        <rect x="88" y="0" width="8" height="140" rx="4" fill="#bdbdbd" />
+        <rect x="92" y="4" width="2" height="120" rx="1" fill="#fff" opacity="0.18"/>
+        <circle cx="92" cy="148" r="6" fill="#bdbdbd"/>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>
